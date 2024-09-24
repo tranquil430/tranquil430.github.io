@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Para sayo ito love</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*FOR YOU MY LOVE</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Hello love !<br />
+			Naalala mo pa ba nung nagkakilala tayo?<br />
+			<span class="comments">// Di ko talaga inexpect. </span><br />
+			Hindi ko akalain aabot tayo hanggang ngayon<br />
+			<span class="comments">// Gusto ko pang magtagal tayo</span><br />
+			Ayaw kong mawala ka sa akin<br />
+			Ikaw at ikaw lang ang pipiliin ko<br />
+			Nandito ako lagi para sayo love<br />
+			Mahal na mahal kita<br />
+			Sorry kung minsan may nagagawa ako or nasasabi akong nakakasakit<br />
+			at minsan kapag nagseselos ako<br />
+			<span class="comments">// Sana mabawasan na mga pag aaway natin</span><br />
+			Hindi kita iiwan love<br />
+			<br>
+			<br>
+			Ang gusto ko lang sabihin ay<br />
+			Hindi ako magsasawa sayo<br />
+			<br>
+			<br>
+			Pindutin mo yung heart love<br />
+			<br>
+			<span id="heartspan">
+			<a href="image.jpg"><i class="fas fa-heart" id="icon"></i></a>
+			</span>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					IKAW LANG FOREVER
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					MY ONE AND ONLY<br/>
+					<div class="signature">-RYLE</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2023, 8, 22);
+together.setHours(23);
+together.setMinutes(30);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
